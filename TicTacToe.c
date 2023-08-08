@@ -6,6 +6,7 @@
 #include <windows.h>
 #include <time.h>
 
+// Variables globales usadas
 char tablero[3][3];
 typedef enum
 {
@@ -21,11 +22,13 @@ typedef enum
 ModoDeJuego modoDeJuego;
 Jugador jugador;
 
+// Valores de Colores utilizados
 #define COLOR_NORMAL "\033[0m"
 #define COLOR_VERDE "\033[0;40;32m"
 #define COLOR_ROJO "\033[0;31m"
 #define COLOR_AZUL "\033[0;1;34m"
 
+// Funciones definidas
 void resetearTablero();
 void imprimirTablero();
 int verEspaciosLibres();
@@ -38,7 +41,7 @@ void turno(ModoDeJuego modoDeJuego);
 char seleccionarModoJuego();
 void verInstrucciones();
 void salir();
-boolean jugarDeNuevo();
+bool jugarDeNuevo();
 char *imprimirCaracter(char caracter);
 void limpiar();
 void limpiarBuffer();
@@ -89,7 +92,7 @@ int main()
    return 0;
 }
 
-// Función para reemplazar las 'X' o 'O' para resetear la partida
+// Función para reemplazar las 'X' y 'O', para resetear el tablero
 void resetearTablero()
 {
    for (int i = 0; i < 3; i++)
@@ -130,7 +133,6 @@ int verEspaciosLibres()
 
    return espaciosLibres;
 }
-
 
 // Función para que el jugador haga su movimiento
 void movimientoJugador(Jugador jugadorEnTurno)
@@ -193,6 +195,7 @@ void movimientoMaquina()
    {
       do
       {
+         // Obtenemos los movimientos de X e Y en base a modulo de 3, el cual podra arrojar los valores del 1 al 3
          x = rand() % 3;
          y = rand() % 3;
       } while (tablero[x][y] != ' ');
@@ -228,6 +231,7 @@ char comprobarGanador()
    // Comprobamos Diagonales
    bool esGanadorPorDiagonalPrincipal = (tablero[0][0] == tablero[1][1] && tablero[0][0] == tablero[2][2]);
    bool esGanadorPorDiagonalSecundaria = (tablero[0][2] == tablero[1][1] && tablero[0][2] == tablero[2][0]);
+
    if (esGanadorPorDiagonalPrincipal || esGanadorPorDiagonalSecundaria)
    {
       return tablero[1][1];
@@ -236,7 +240,7 @@ char comprobarGanador()
    return ' ';
 }
 
-// Función imprimir el ganador
+// Función imprimir el ganador, en el caso de que sea una partida contra la CPU o contra otro jugador
 void imprimirGanador(char ganador)
 {
    if (modoDeJuego == JUGADOR_VS_JUGADOR)
@@ -271,6 +275,8 @@ void imprimirGanador(char ganador)
    }
 }
 
+
+// Función para poder seleccionar el modo de juego, ya sea contra la maquina o la CPU
 char seleccionarModoJuego()
 {
    char modo;
@@ -305,7 +311,6 @@ void jugar(ModoDeJuego modoDeJuego)
 
    do
    {
-
       char ganador = ' ';
       resetearTablero();
 
@@ -339,17 +344,8 @@ void jugar(ModoDeJuego modoDeJuego)
             }
          }
 
-         // movimientoJugador();
-         // ganador = comprobarGanador();
-         // if (ganador != ' ' || verEspaciosLibres() == 0)
-         // {
-         //    break;
-         // }
-
-         // limpiar();
-         // movimientoMaquina();
-
          ganador = comprobarGanador();
+
          if (ganador != ' ' || verEspaciosLibres() == 0)
          {
             break;
@@ -363,6 +359,8 @@ void jugar(ModoDeJuego modoDeJuego)
    } while (!jugarDeNuevo());
 }
 
+
+// Función para imprimir como encabezado del tablera de quién es el turno actual
 void turno(ModoDeJuego modoDeJuego)
 {
    if (modoDeJuego == JUGADOR_VS_JUGADOR)
@@ -499,7 +497,7 @@ void salir()
 }
 
 // Función para poder repetir el el juego o finalizarlo
-boolean jugarDeNuevo()
+bool jugarDeNuevo()
 {
    Sleep(2000);
    while (true)
@@ -575,6 +573,5 @@ void limpiarBuffer()
 {
    int c; // Declaramos una variable
    // En este bucle se toman todos los valores, se para hasta que no haya mas valores tomados por el getchar() y hasta que no sea el final del archivo (EOF) que significa que no hay mas entradas en el archivo
-   while ((c = getchar()) != '\n' && c != EOF)
-      ;
+   while ((c = getchar()) != '\n' && c != EOF);
 }
