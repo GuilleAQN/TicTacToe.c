@@ -1,21 +1,4 @@
-# Juego de Tic Tac Toe
-{: .titulo-con-color}
-
-<style>
-.titulo-con-color {
-    font-size: 24px;
-    font-weight: bold;
-}
-.titulo-verde {
-    color: green;
-}
-.titulo-rojo {
-    color: red;
-}
-.titulo-azul {
-    color: blue;
-}
-</style>
+# Juego de <span style="color: green;">Tic</span> <span style="color: red;">Tac</span> <span style="color: blue;">Toe</span>
 
 ⁣        ⭕ | ⭕ |❌\n
         ➖➕➖➕➖
