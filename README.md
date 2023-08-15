@@ -1,4 +1,23 @@
-# Juego de <span style="color:green">Tic</span> <span style="color: red;">Tac</span> <span style="color: blue;">Toe</span>
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.titulo-verde {
+    color: green;
+}
+
+.titulo-rojo {
+    color: red;
+}
+
+.titulo-azul {
+    color: blue;
+}
+</style>
+</head>
+<body>
+
+# Juego de <span class="titulo-verde">Tic</span> <span class="titulo-rojo">Tac</span> <span class="titulo-azul">Toe</span>
 
 ⁣        ⭕ | ⭕ |❌\n
         ➖➕➖➕➖
@@ -59,3 +78,6 @@ Este juego de Tres en Raya fue desarrollado por Omar Guillermo Aquino Mena como 
 - Este programa se basa en la lógica del juego de Tres en Raya y presenta una interfaz simple. Puede haber mejoras adicionales y características avanzadas que se pueden agregar según las necesidades del usuario.
 
 ¡Diviértete jugando al Tres en Raya! Si tienes alguna pregunta o sugerencia, no dudes en ponerte en contacto con el desarrollador en [omarguillermo1@gmail.com](mailto:omarguillermo1@gmail.com).
+
+</body>
+</html>
