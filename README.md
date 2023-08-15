@@ -1,41 +1,16 @@
-<!DOCTYPE html>
-<html>
-<head>
-<style>
-.titulo-verde {
-    color: green;
-}
-
-.titulo-rojo {
-    color: red;
-}
-
-.titulo-azul {
-    color: blue;
-}
-</style>
-</head>
-<body>
-
-# Juego de <span class="titulo-verde">Tic</span> <span class="titulo-rojo">Tac</span> <span class="titulo-azul">Toe</span>
-
-⁣        ⭕ | ⭕ |❌\n
-        ➖➕➖➕➖
-        ⭕ |⁣ ❌| ⭕
-        ➖➕➖➕➖
-        ❌ | ❌| ⭕
+# Juego de Tic Tac Toe
 
 Este es un juego de Tres en Raya implementado en el lenguaje de programación C, que permite a dos jugadores competir entre sí o jugar contra la computadora. El juego se ejecuta en la consola y presenta una interfaz simple pero efectiva para disfrutar del clásico juego.
 
 ## Características
 
-- **Modos de juego**: <span style="color: green;">Jugador vs Jugador (PvP)</span> y <span style="color: red;">Jugador vs Máquina (PvE)</span>.
+- **Modos de juego**: Jugador vs Jugador (PvP) y Jugador vs Máquina (PvE).
 - **Interfaz de consola interactiva y fácil de entender**.
 - **Opción para ver las instrucciones del juego**.
 - **Sistema de colores para distinguir los movimientos de los jugadores**.
 - **Opción para jugar múltiples partidas consecutivas**.
 - **Verificación de ganador y empate**.
-- Elección de ser el jugador <span style="color: red;">X (rojo)</span> o el jugador <span style="color: blue;">O (azul)</span>.
+- Elección de ser el jugador X (rojo) o el jugador O (azul).
 
 ## Instrucciones
 
@@ -69,7 +44,7 @@ Este es un juego de Tres en Raya implementado en el lenguaje de programación C,
   ./TicTacToe
    ```
 
-4.## Créditos
+## Créditos
 
 Este juego de Tres en Raya fue desarrollado por Omar Guillermo Aquino Mena como proyecto educativo. Siéntete libre de utilizar, modificar y distribuir el código según tus necesidades.
 
@@ -78,6 +53,3 @@ Este juego de Tres en Raya fue desarrollado por Omar Guillermo Aquino Mena como 
 - Este programa se basa en la lógica del juego de Tres en Raya y presenta una interfaz simple. Puede haber mejoras adicionales y características avanzadas que se pueden agregar según las necesidades del usuario.
 
 ¡Diviértete jugando al Tres en Raya! Si tienes alguna pregunta o sugerencia, no dudes en ponerte en contacto con el desarrollador en [omarguillermo1@gmail.com](mailto:omarguillermo1@gmail.com).
-
-</body>
-</html>
