@@ -1,4 +1,4 @@
-# Juego de <span style="color: green;">Tic</span> <span style="color: red;">Tac</span> <span style="color: blue;">Toe</span>
+# Juego de <span style="color: green;">*Tic*</span> <span style="color: red;">Tac</span> <span style="color: blue;">Toe</span>
 
 ⁣        ⭕ | ⭕ |❌\n
         ➖➕➖➕➖
